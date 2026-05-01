@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Richard Li — Everlab, Chief of Staff</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #f7f5f0;
+    --ink: #1c1c1a;
+    --ink-mid: #4a4a46;
+    --ink-light: #8a8880;
+    --rule: #dddbd5;
+    --green: #2d6a4f;
+  }
+
+  html { font-size: 17px; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    line-height: 1.8;
+    min-height: 100vh;
+  }
+
+  /* ---- NAV BAR ---- */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--rule);
+    background: var(--cream);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .nav-from {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+  }
+
+  .nav-to {
+    font-size: 13px;
+    color: var(--ink-light);
+    font-style: italic;
+  }
+
+  /* ---- HERO ---- */
+  .hero {
+    padding: 72px 40px 56px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 20px;
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4.5vw, 52px);
+    line-height: 1.15;
+    color: var(--ink);
+    font-weight: 700;
+    max-width: 600px;
+    margin-bottom: 28px;
+  }
+
+  h1 em {
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .hero-sub {
+    font-size: 17px;
+    color: var(--ink-mid);
+    max-width: 520px;
+    line-height: 1.75;
+  }
+
+  /* ---- MAIN LETTER ---- */
+  .letter {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 56px 40px 0;
+  }
+
+  .salutation {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--ink);
+    margin-bottom: 32px;
+  }
+
+  p {
+    font-size: 17px;
+    color: var(--ink-mid);
+    line-height: 1.82;
+    margin-bottom: 26px;
+    max-width: 660px;
+  }
+
+  p strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* ---- SECTION HEADINGS ---- */
+  .section-head {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--ink);
+    margin: 52px 0 20px;
+    font-weight: 700;
+  }
+
+  .section-head em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--ink-mid);
+  }
+
+  /* ---- DIVIDER ---- */
+  hr {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 48px 0;
+    max-width: 660px;
+  }
+
+  /* ---- SIGN OFF ---- */
+  .signoff {
+    padding: 48px 40px 80px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-top: 1px solid var(--rule);
+  }
+
+  .signoff p {
+    margin-bottom: 20px;
+  }
+
+  .sign-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--ink);
+    display: block;
+    margin-top: 28px;
+    margin-bottom: 8px;
+  }
+
+  .sign-contact {
+    font-size: 15px;
+    color: var(--ink-light);
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .sign-contact a {
+    color: var(--ink-mid);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.15s;
+  }
+
+  .sign-contact a:hover { color: var(--ink); }
+
+  /* ---- FOOTER ---- */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  footer span {
+    font-size: 12px;
+    color: var(--ink-light);
+    font-style: italic;
+  }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 600px) {
+    nav, .hero, .letter, .signoff, footer {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    .hero { padding-top: 48px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-from">Richard Li</span>
+  <span class="nav-to">For Marc Hermann, Everlab</span>
+</nav>
+
+<section class="hero">
+  <div class="eyebrow">Chief of Staff</div>
+  <h1>Marc, Everlab just<br>changed stages.</h1>
+  <p class="hero-sub">The pre-raise period was about finding what works. That work is done. Here is why I am the right person to help you execute what comes next.</p>
+</section>
+
+<div class="letter">
+
+  <div class="salutation">Marc,</div>
+
+  <p>The results speak for themselves. One in four members flagging abnormal results. Life-changing findings at scale. A waitlist in the tens of thousands.</p>
+
+  <p>With your $15M seed raise, the gears have shifted. And that creates a new class of problem.</p>
+
+  <p>Scaling internationally, growing the clinical network, building the engineering team, developing new revenue streams, keeping investors and the board informed — none of this happens in sequence. It all happens at once.</p>
+
+  <p>You can't do everything and your attention is finite. The further Everlab moves into execution mode, the more your focus gets pulled across competing priorities simultaneously. Things that need a decision, stall. Initiatives that need an owner get orphaned. The connective tissue between teams starts to fray.</p>
+
+  <p>The Chief of Staff hire exists to solve that. Not to add another layer — to extend what you can see, decide and drive. You need someone who doesn't need to be managed. Someone who picks up the hardest problems, figures them out, and drives them to done. Someone who moves with urgency because they understand what's at stake. Someone who's done it before, in environments where failure was real and exits didn't exist.</p>
+
+  <p><strong>I'm that person. Here is what I actually bring.</strong></p>
+
+  <hr>
+
+  <h2 class="section-head">I've been competing my entire life.</h2>
+
+  <p>State swimming. National basketball at 15. State chess throughout high school. I was never the most talented person in any of those rooms — but I was consistently one of the last ones standing. I outworked, out-prepared and out-lasted.</p>
+
+  <p>When I transitioned into esports I applied the same rigour to a different arena. I climbed to Rank 1 in all of Oceania/APAC for PUBG — one of the most popular games in the world at the time, with over 3 million concurrent players at peak. Then Fortnite. Live audiences, high stakes, no safety net.</p>
+
+  <p>That background built skills that translate directly into business: decision-making under pressure, reading a situation faster than everyone else and capitalising fast, sustaining elite performance over hundreds of hours when most people drop off, and knowing when to push harder and when to recover. These are the skills that determine who wins in a fast-moving business environment. They are not siloed to gaming.</p>
+
+  <hr>
+
+  <h2 class="section-head">What that looks like <em>in practice.</em></h2>
+
+  <p>At a cybersecurity start-up I was the first non-technical hire. The founder was still working a full-time executive role. No revenue in sight. A major deal had been introduced but was going nowhere — no owner, no momentum.</p>
+
+  <p>I picked it up and owned it end to end. Formed the relationship with the client. Diagnosed the invisible bottleneck killing the deal: the COO of a $50M/year healthcare clinic couldn't get board sign-off because she didn't have what she needed to walk into that room confidently. So I built it for her. Equipped her to present. We closed the first major 6-figure deal.</p>
+
+  <p>I also identified that our public-facing branding needed to be trustworthy in the Aussie market. I found an Australian-owned cybersecurity firm with 30+ years of reputation, built the relationship, and converted it into a long-term partnership. They got lower delivery costs and stronger capability. We got a trusted Australian brand as our public face.</p>
+
+  <p>At NEC — a slow-moving corporate by reputation — I operated differently. I drove initiatives throughout four years that weren't in my job description, always from the highest leverage action available, then moved rapidly to execute. Technology implementations. AI and productivity tools identified, implemented and enabled across the business. Convincing non-believers into promoters. Every single one required navigating red tape, governance and people who didn't see the point yet.</p>
+
+  <p>I suspect that is exactly the type of navigation required to launch into different countries, or different states within a country like America. The pattern was the same: find the thing that matters, build the case, bring people onto the bus, get it done. Three promotions in four years. Pseudo Chief of Staff to the COO of a $250M, 850-headcount company.</p>
+
+  <p>I've also started and run my own businesses. I know what it means to operate as an owner with everything on the line — no fall back plan, no excuses for it not working.</p>
+
+  <hr>
+
+  <h2 class="section-head">The resume contrast <em>is real.</em></h2>
+
+  <p>You'll find candidates with more experience, cleaner career paths, and stronger pedigrees. What they won't have is the conviction to win and the hunger that comes from building everything from nothing.</p>
+
+  <p>In 2018 I was working in a call centre for Wesfarmers. I climbed to leading enterprise-wide initiatives and reporting to the COO — without a degree, without a network. I was raised by a single mother, kicked out at 18, dropped out of university twice. I've washed a thousand dishes a day, delivered newspapers, worked bar back at Merivale. Worked 7 days a week for 2 years laying cable and climbing into roofs for the NBN on weekdays, selling electronics at JB Hi-Fi on the weekends.</p>
+
+  <p>I've never waited for the right conditions because I've never had them. I just keep finding a way to win.</p>
+
+  <p><strong>That's what you're hiring.</strong></p>
+
+</div>
+
+<div class="signoff">
+  <p>I would love the opportunity to chat face to face or online, whatever suits your schedule. I'm based in Sydney but happy to fly to Melbourne to meet. I want to understand the specific problems you need solved in the next ninety days. If I can deliver what you need, we look at whether this could work formally. If it doesn't, there is no cost to you.</p>
+  <p>Looking forward to chatting with you.</p>
+  <span class="sign-name">Richard Li</span>
+  <div class="sign-contact">
+    <a href="tel:0461456422">0461 456 422</a>
+    <a href="mailto:richard@example.com">richard@example.com</a>
+  </div>
+</div>
+
+<footer>
+  <span>Richard Li &nbsp;·&nbsp; Sydney, NSW</span>
+  <span>Built for Marc Hermann, not for the internet.</span>
+</footer>
+
+</body>
+</html>
